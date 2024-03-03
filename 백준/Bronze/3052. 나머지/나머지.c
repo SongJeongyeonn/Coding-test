@@ -1,28 +1,24 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-
-    int result = 0;
-    int remain[10];
-
+    int num[10];
+    int res = 0;
     for (int i = 0; i < 10; i++)
     {
-        scanf("%d", &remain[i]);
-        remain[i] = remain[i] % 42;
+        scanf("%d", &num[i]);
+        num[i] = num[i] % 42;
     }
-
-    for (int i = 0; i < 10; i++) 
+    for (int j = 0; j < 10; j++)
     {
         int count = 0;
-        for (int j = i + 1; j < 10; j++)
-        { 
-            if (remain[i] == remain[j])
-                count++;
+        for (int k = j+1; k < 10; k++)
+        {
+            if (num[j] == num[k])
+                count += 1;
         }
         if (count == 0)
-            result++;
+            res += 1;
     }
-
-    printf("%d", result);
+    printf("%d", res);
+    return 0;
 }
