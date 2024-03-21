@@ -1,40 +1,24 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int A, B, C;
-    scanf("%d %d %d", &A, &B, &C);
-    if (A <= 23 && B+C < 60)
+    int H, M, C;
+    scanf("%d %d %d", &H, &M, &C);
+    if(C >= 60)
     {
-        B = B+C;
-    }
-    else if (A < 23 && B+C >= 60)
-    {
-        B = B+C;
-        do
-        {
-            A = A+1;
-            B = B-60;
-            if (A == 23 && B >= 60)
-            {
-                A = -1;
-                do
-                {
-                    A = A + 1;
-                    B = B - 60;
-                } while (B >= 60);
-            }
-        } while (B >= 60 );
+        H += C/60;
+        M += C%60;
+        C = C - 60*(C/60);
     }
     else
+        M += C;
+    if(M >= 60)
     {
-        A = -1;
-        B = B+C;
-        do
-        {
-            A = A+1;
-            B = B-60;
-        } while (B >= 60);
+        H += M/60;
+        M = M - 60*(M/60);
     }
-    printf("%d %d", A, B);
+    if(H > 23)
+        H -= 24*(H/24);
+    
+    printf("%d %d", H, M);
     return 0;
 }
