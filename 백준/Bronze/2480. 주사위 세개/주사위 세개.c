@@ -1,43 +1,20 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int A, B, C, sum;
-    scanf("%d %d %d", &A, &B, &C);
-    if( A == B && B == C)
+    int x,y,z,p;
+    scanf("%d %d %d", &x, &y, &z);
+    if(x == y && y == z)
+        p = 10000+x*1000;
+    else if(x != y && y != z && z != x)
     {
-        sum = A*1000;
-        sum = sum+10000;
-    }
-    else if( A == B && B != C && C != A)
-    {
-        sum = A*100;
-        sum = sum+1000;
-    }
-    else if( A != B && B == C && C != A)
-    {
-        sum = B*100;
-        sum = sum+1000;
-    }
-    else if( A != B && B != C && C == A)
-    {
-        sum = C*100;
-        sum = sum+1000;
+        p = x>y?z>x?z:x:y>z?y:z;
+        p *= 100;
     }
     else
     {
-        if( A > B && A > C)
-        {
-            sum = A*100;
-        }
-        else if( B > A && B > C)
-        {
-            sum = B*100;
-        }
-        else if( C > B && C > A)
-        {
-            sum = C*100;
-        }
+        p = x==y?x:y==z?y:z;
+        p = 1000+p*100;
     }
-    printf("%d", sum);
+    printf("%d", p);
     return 0;
 }
