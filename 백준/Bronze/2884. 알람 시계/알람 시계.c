@@ -1,26 +1,20 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int A, B;
-    scanf("%d %d", &A, &B);
-    if (A <= 23 && B >= 45)
+    int H, M;
+    scanf("%d %d", &H, &M);
+    if(M >= 45)
+        M -= 45;
+    else if(H>0 && M < 45)
     {
-        B = B - 45;
-        printf("%d %d", A, B);
-    }
-    else if (A <= 23 && A > 0 && B < 45)
-    {
-        A = A - 1;
-        B = B - 45;
-        B = 60 + B;
-        printf("%d %d", A, B);
+        H -= 1;
+        M = M+15;
     }
     else
     {
-        A = 23;
-        B = B - 45;
-        B = 60 + B;
-        printf("%d %d", A, B);
+        H = 23;
+        M = M+15;
     }
+    printf("%d %d", H, M);
     return 0;
 }
