@@ -1,22 +1,16 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int A, B;
-    scanf("%d %d", &A, &B);
-    int sum = 0;
-    for (int i = 1; i <= B; i++)
+    int n, p, m, q, s=0;
+    scanf("%d %d", &n, &p);
+    for(int i = 0; i < p; i++)
     {
-        int a, b;
-        scanf("%d %d", &a, &b);
-        sum = sum + a*b;
+        scanf("%d %d", &m, &q);
+        s += q*m;
     }
-    if (sum == A)
-    {
-        printf("Yes");
-    }
+    if(s == n)
+            printf("Yes");
     else
-    {
-        printf("No");
-    }
+            printf("No");
     return 0;
 }
