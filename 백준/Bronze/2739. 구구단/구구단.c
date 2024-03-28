@@ -1,13 +1,11 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int A, B;
-    scanf("%d", &A);
-    for (int i = 1; i <= 9; i++)
+    int n;
+    scanf("%d", &n);
+    for(int i = 1; i<=9; i++)
     {
-        B = A * i;
-        printf("%d * %d = %d\n", A, i, B);
+        printf("%d * %d = %d\n", n, i, n*i);
     }
     return 0;
 }
