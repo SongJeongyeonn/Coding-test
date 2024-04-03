@@ -1,12 +1,10 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int A;
-    scanf("%d", &A);
-    for(int i = 1; i <= A/4; i++)
-    {
+    int a;
+    scanf("%d", &a);
+    for(int i = a; i/4!=0; i=i-4)
         printf("long ");
-    }
     printf("int");
     return 0;
 }
