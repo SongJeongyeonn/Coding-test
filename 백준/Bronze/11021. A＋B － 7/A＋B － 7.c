@@ -1,13 +1,12 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int T;
-    scanf("%d", &T);
-    for (int i = 1; i <= T; i++)
+    int a, A, B;
+    scanf("%d", &a);
+    for(int i=1; i<=a; i++)
     {
-        int A, B;
         scanf("%d %d", &A, &B);
-        printf("Case #%d: %d\n", i, A + B);
+        printf("Case #%d: %d\n", i, A+B);
     }
     return 0;
 }
