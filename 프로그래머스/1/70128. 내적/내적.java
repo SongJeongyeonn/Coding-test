@@ -1,0 +1,9 @@
+class Solution {
+    public int solution(int[] a, int[] b) {
+        int answer = 0, size = a.length;
+        for(int i = 0; i < size; i++){
+            answer = a[i] * b[i] + answer;
+        }
+        return answer;
+    }
+}
