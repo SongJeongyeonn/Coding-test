@@ -3,6 +3,5 @@ def solution(n):
     temp.sort(reverse = True)
     answer = 0
     for i in range(len(temp)):
-        answer *= 10
-        answer += temp[i]
+        answer = answer*10+temp[i]
     return answer
