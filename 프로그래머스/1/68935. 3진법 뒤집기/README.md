@@ -1,10 +1,10 @@
 # [level 1] 3진법 뒤집기 - 68935 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/68935) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/68935?language=python3) 
 
 ### 성능 요약
 
-메모리: 98.8 MB, 시간: 0.07 ms
+메모리: 9.33 MB, 시간: 0.03 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 09월 03일 09:32:19
+2026년 01월 06일 13:22:38
 
 ### 문제 설명
 
