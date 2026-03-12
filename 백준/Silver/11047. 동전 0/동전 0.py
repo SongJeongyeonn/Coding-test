@@ -8,5 +8,7 @@ money.sort(reverse=True)
 res = 0
 for j in money:
     res += a // j
-    a = a % j
+    a %= j
+    if a == 0:
+        break
 print(res)
