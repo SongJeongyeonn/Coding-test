@@ -4,6 +4,6 @@ n = int(input())
 people = list(map(int, input().split()))
 people.sort()
 res = 0
-for i in range(n):
-    res += sum(people[j] for j in range(i+1))
-print(res)
+for i in range(1, n):
+    people[i] += people[i-1]
+print(sum(people))
