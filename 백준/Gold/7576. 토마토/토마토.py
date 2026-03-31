@@ -20,11 +20,10 @@ while q:
     x, y = q.popleft() # 위치 꺼내기
     for dx, dy in dirs:
         nx, ny = x + dx, y + dy
-        if 0 <= nx < n and 0 <= ny < m: # 유효 범위
-            if tomato[nx][ny] == 0: # 안 익은 거만
-                cnt2 += 1
-                tomato[nx][ny] = tomato[x][y] + 1 # 날짜 더하기(누적됨)
-                q.append((nx, ny)) # 다시 저장.
+        if 0 <= nx < n and 0 <= ny < m and tomato[nx][ny] == 0: # 유효범위와 안 익은 거만
+            cnt2 += 1
+            tomato[nx][ny] = tomato[x][y] + 1 # 날짜 더하기(누적됨)
+            q.append((nx, ny)) # 다시 저장.
 
 if cnt1 != cnt2:
     print(-1)
