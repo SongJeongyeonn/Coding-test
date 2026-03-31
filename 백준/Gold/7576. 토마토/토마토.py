@@ -8,6 +8,7 @@ q = deque()
 dirs = [(1,0),(-1,0),(0,1),(0,-1)]
 cnt1 = 0
 cnt2 = 0
+result = 0
 
 for i in range(n):
     for j in range(m):
@@ -25,12 +26,12 @@ while q:
                 cnt2 += 1
                 tomato[nx][ny] = tomato[x][y] + 1 # 날짜 더하기(누적됨)
                 q.append((nx, ny)) # 다시 저장.
+                result = max(result, tomato[nx][ny]) # 누적값이 큰걸로 교체
 
-result = 0
+
 if cnt1 != cnt2:
     print(-1)
+elif result == 0:
+    print(0)
 else:
-    for i in range(n):
-        for j in range(m):
-            result = max(result, tomato[i][j]) # 누적값이 큰걸로 교체
     print(result - 1)
