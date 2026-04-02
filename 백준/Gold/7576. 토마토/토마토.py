@@ -30,4 +30,4 @@ while q:
 if remain != 0:
     print(-1)
 else:
-    print(max(list(max(row) for row in tomato))-1)
+    print(max(max(row) for row in tomato)-1)
