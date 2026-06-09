@@ -1,3 +1,5 @@
 def solution(array, commands):
-    answer = [ sorted(array[commands[i][0]-1 : commands[i][1]])[commands[i][2]-1] for i in range(len(commands))]
+    answer = []
+    for command in commands:
+        answer.append(sorted(array[command[0] - 1:command[1]])[command[2]-1])
     return answer
